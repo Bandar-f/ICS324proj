@@ -8,7 +8,7 @@ import { Redirect, Link } from 'react-router-dom';
 const Login = (props) => {
 
 
-  const [pass,setPass]=useState(false);
+  const [pass,setPass]=useState(true);
 
   const[log,setLog]=useState({
     StudentID:"",
@@ -31,16 +31,16 @@ const Login = (props) => {
     //console.log(log);
 
 
-  axios.post('http://localhost:3001/login',log)
-  .then(res=>{
+  // axios.post('http://localhost:3001/login',log)
+  // .then(res=>{
           
 
-    props.setUser(parseInt((res.data[0].ID+"").charAt(0),10));
+  //   props.setUser(parseInt((res.data[0].ID+"").charAt(0),10));
 
 
 
-    if(res.data.length===1)
-        setPass(true);
+  //   if(res.data.length===1)
+  //       setPass(true);
 
 
 
@@ -48,7 +48,7 @@ const Login = (props) => {
 
 
 
-  }).catch(err=>console.log(err));
+  // }).catch(err=>console.log(err));
 
   
   }
@@ -84,7 +84,7 @@ const Login = (props) => {
       </div>
 
       {pass ? 
-						<Redirect to={props.userType === 0 ? '/Addclub' : props.userType===1 ? "/Addproject":"/Browseprojects"} />: ''}
+						<Redirect to="/Addproject" />: ''}
 
 
 

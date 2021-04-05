@@ -20,27 +20,27 @@ const Navbar = (props) => {
 
   const toggleSideBar= ()=> setSidebar(!sidebar);
 
-const [menu,setMenu]=useState([]);
+const [menu,setMenu]=useState(SidebarcAdmin);
 
- useEffect(()=>{
+//  useEffect(()=>{
 
 
-  if(props.userType==0)
-  setMenu(SidebarData);
+//   if(props.userType==0)
+//   setMenu(SidebarData);
 
-  else if(props.userType==1)
-  setMenu(SidebarcAdmin);
+//   else if(props.userType==1)
+//   setMenu(SidebarcAdmin);
  
-  else if(props.userType==2)
-  setMenu(SidebarMember);
-  else if(props.userType==3)
-  setMenu(Sidebarguest);
+//   else if(props.userType==2)
+//   setMenu(SidebarMember);
+//   else if(props.userType==3)
+//   setMenu(Sidebarguest);
   
 
 
 
 
- },[]);
+//  },[]);
 
 
 
